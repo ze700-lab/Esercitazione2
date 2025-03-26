@@ -10,21 +10,21 @@ Aprire il programma `git-bash` nella cartella di PortableGit appena creata.
 ![](git-bash.png)
 
 ## Creazione progetto
-Creare una cartella per il progetto sul Desktop chiamata `Esercitazione14marzo`.
+Creare una cartella per il progetto sul Desktop chiamata `Esercitazione2`.
 Su git-bash eseguire
 ```
-cd  $HOME/path/to/Esercitazione14marzo
+cd  $HOME/path/to/Esercitazione2
 ```
-dove `path/to/` rappresenta il percorso della cartella `Esercitazione14marzo`.
+dove `path/to/` rappresenta il percorso della cartella `Esercitazione2`.
 
-Creare un file `README.md` in Blocco note, che sarà il readme file del repository Git, scrivete Esercitazione14marzo e aggiungete il vostro nome e classe .
+Creare un file `README.md` in Blocco note, che sarà il readme file del repository Git, scrivete Esercitazione2 e aggiungete il vostro nome e classe .
 Salvare il file.
 
 ### Creazione repository su Github
 - Aprire il sito github.com
 - Effettuare il login
 - Cliccare su `New` ![](newRepo.png)
-- Creare un nuovo repository `Esercitazione14marzo`, prestando attenzione a non creare un Readme di default ![](repo.png)
+- Creare un nuovo repository `Esercitazione2`, prestando attenzione a non creare un Readme di default ![](repo.png)
 
 ### Configurazione del repository locale e sincronizzazione
 Da `git-bash` eseguire i seguenti comandi:
@@ -33,7 +33,7 @@ git init  # Inizializza il repository locale
 git add README.md  # Inserimento del file README.md nell'area di staging
 git commit -m "first commit"  # Creazione del primo commit, che serve a sincronizzare il repository locale con lo stage
 git branch -M main  # Creazione del branch main, da usare come default
-git remote add origin git@github.com:<username>/Esercitazione14marzo.git  # Connessione del repository remoto al repository locale
+git remote add origin git@github.com:<username>/Esercitazione2.git  # Connessione del repository remoto al repository locale
 git push -u origin main  # Sincronizzazione del repository remoto con quello locale
 ```
 ## Aggiunta di nuovi file al repository
