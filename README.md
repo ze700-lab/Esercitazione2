@@ -17,7 +17,7 @@ cd  $HOME/path/to/Esercitazione2
 ```
 dove `path/to/` rappresenta il percorso della cartella `Esercitazione2`.
 
-Creare un file `README.md` in Blocco note, che sarà il readme file del repository Git, scrivete Esercitazione2 e aggiungete il vostro nome e classe .
+Creare un file `README.md` COPIANDO IL CONTENUTO DEL FILE README.md presente in questa Esercitazione (quindi Esercitazione2) in Blocco note, che sarà il readme file del repository Git, scrivete Esercitazione2 e aggiungete il vostro nome e classe .
 Salvare il file.
 
 ### Creazione repository su Github
