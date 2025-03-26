@@ -36,12 +36,7 @@ git branch -M main  # Creazione del branch main, da usare come default
 git remote add origin git@github.com:<username>/Esercitazione2.git  # Connessione del repository remoto al repository locale
 git push -u origin main  # Sincronizzazione del repository remoto con quello locale
 ```
-## Aggiunta di nuovi file al repository
-1. Creare un nuovo file `main.c` nel workspace
-2. Implementare un programma che, dati in input 10 numeri positivi, trovi il massimo e lo visualizzi a video
-3. Aggiungere il nuovo file nell'area di staging
-4. Sincronizzare l'area di staging con il repository locale (usando un messaggio di commit congruo)
-5. Sincronizzare il repository remoto con quello locale
+
 # Sezione 2
 ## Branching con git
 Nella directory di lavoro dell’esempio precedente la digitazione del comando git branch visualizza inizialmente solo il branch principale main:
@@ -59,28 +54,33 @@ giorgio@localhost:~/workspace/ExpenseManager> git branch
 * main
 ```
 L’attività di sviluppo viene effettuata sul branch principale aggiungendo/modificando file di codice ed effettuando il commit delle aggiunte/modifiche apportate:
+## Aggiunta di nuovi file al repository
+1. Creare un nuovo file `main.cpp` nel workspace
+2. Implementare un programma che, dati in input 10 numeri positivi, trovi il massimo e lo visualizzi a video
+3. Aggiungere il nuovo file nell'area di staging
+4. Sincronizzare l'area di staging con il repository locale (usando un messaggio di commit congruo)
+5. Sincronizzare il repository remoto con quello locale
 ```
 giorgio@localhost:~/workspace/ExpenseManager> ls
-Azione.h Date.h LICENSE Progetto.cpp Progetto.h
-giorgio@localhost:~/workspace/ExpenseManager> git add Progetto.*
-giorgio@localhost:~/workspace/ExpenseManager> git commit -m "Aggiunta classe Progetto"
-[main 4c53517] Aggiunta classe Progetto
+main.cpp README.md
+giorgio@localhost:~/workspace/ExpenseManager> git add main.*
+giorgio@localhost:~/workspace/ExpenseManager> git commit -m "Aggiunta classe Main"
+[main 4c53517] Aggiunta classe Main
  2 files changed, 462 insertions(+)
- create mode 100644 Progetto.cpp
- create mode 100644 Progetto.h
+ create mode 100644 main.cpp
  ```
 
  L’attività di documentazione viene effettuata sul branch dedicato aggiungendo/modificando file di testo ed effettuando il commit delle aggiunte/modifiche apportate; nel branch dedicato alla documentazione non sono visibili le aggiunte/modifiche apportate nel branch principale:
  ```
-giorgio@localhost:~/workspace/ExpenseManager> git checkout Documentazione
-Switched to branch 'Documentazione'
+giorgio@localhost:~/workspace/ExpenseManager> git checkout documentazione
+Switched to branch 'documentazione'
 giorgio@localhost:~/workspace/ExpenseManager> git branch
 
-* Documentazione
+* documentazione
  main
 
 giorgio@localhost:~/workspace/ExpenseManager> ls
-Azione.h Date.h LICENSE README
+main.h LICENSE README
 giorgio@localhost:~/workspace/ExpenseManager> git add README
 giorgio@localhost:~/workspace/ExpenseManager> git commit -m "Aggiunta file README"
 [Documentazione f4f025d] Aggiunta file README
@@ -100,7 +100,7 @@ Merge made by the 'recursive' strategy.
  1 file changed, 5 insertions(+)
  create mode 100644 README
 giorgio@localhost:~/workspace/ExpenseManager> ls
-Azione.h Date.h LICENSE Progetto.cpp Progetto.h README
+main.cpp Main.h README
 ```
 
 Il comando git log visualizza l’operazione di merging come un’operazione di commit e include nel proprio output le operazioni di commit effettuate sul branch dedicato alla documentazione:
